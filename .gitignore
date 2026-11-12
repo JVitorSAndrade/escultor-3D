@@ -1,0 +1,22 @@
+
+# Arquivos executaveis
+*.exe
+
+# Arquivos gerados pela compilacao C++
+*.o
+*.obj
+*.dll
+*.pdb
+
+# Pastas de compilacao (Qt e CMake)
+build/
+build-*/
+
+# Arquivos gerados pelo CMake
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+
+# Configuracoes locais do Qt Creator
+*.user
+*.user.*
