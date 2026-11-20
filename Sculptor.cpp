@@ -265,3 +265,57 @@ void Sculptor::cutSphere(int xcenter, int ycenter, int zcenter, int radius)
         }
     }
 }
+
+// PUTELLIPSOID
+void Sculptor::putEllipsoid(int xcenter, int ycenter, int zcenter, int rx, int ry, int rz)
+{
+    if (rx <= 0 || ry <= 0 || rz <= 0)
+    {
+        return;
+    }
+
+    for (int x = 0; x < nx; x++)
+    {
+        for (int y = 0; y < ny; y++)
+        {
+            for (int z = 0; z < nz; z++)
+            {
+                double dx = (x - xcenter) / static_cast<double>(rx); // static_cast: gera um valor convertido para double... converte o valor dentro da variavel, nao a variavel em si
+                double dy = (y - ycenter) / static_cast<double>(ry);
+                double dz = (z - zcenter) / static_cast<double>(rz);
+
+                if (dx * dx + dy * dy + dz * dz <= 1.0)
+                {
+                    putVoxel(x, y, z);
+                }
+            }
+        }
+    }
+}
+
+// CUTELLIPSOID
+void Sculptor::cutEllipsoid(int xcenter, int ycenter, int zcenter, int rx, int ry, int rz)
+{
+    if (rx <= 0 || ry <= 0 || rz <= 0)
+    {
+        return;
+    }
+
+    for (int x = 0; x < nx; x++)
+    {
+        for (int y = 0; y < ny; y++)
+        {
+            for (int z = 0; z < nz; z++)
+            {
+                double dx = (x - xcenter) / static_cast<double>(rx);
+                double dy = (y - ycenter) / static_cast<double>(ry);
+                double dz = (z - zcenter) / static_cast<double>(rz);
+
+                if (dx * dx + dy * dy + dz * dz <= 1.0)
+                {
+                    cutVoxel(x, y, z);
+                }
+            }
+        }
+    }
+}

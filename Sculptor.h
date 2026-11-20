@@ -27,11 +27,8 @@ public:
     void putSphere(int xcenter, int ycenter, int zcenter, int radius);
     void cutSphere(int xcenter, int ycenter, int zcenter, int radius);
 
-    void putEllipsoid(int xcenter, int ycenter, int zcenter,
-                      int rx, int ry, int rz);
-
-    void cutEllipsoid(int xcenter, int ycenter, int zcenter,
-                      int rx, int ry, int rz);
+    void putEllipsoid(int xcenter, int ycenter, int zcenter, int rx, int ry, int rz);
+    void cutEllipsoid(int xcenter, int ycenter, int zcenter, int rx, int ry, int rz);
 
     void writeOFF(const char *filename);
 };
