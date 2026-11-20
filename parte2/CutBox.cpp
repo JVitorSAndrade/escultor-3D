@@ -1,0 +1,10 @@
+#include "CutBox.h"
+
+CutBox::CutBox(int x0, int x1, int y0, int y1, int z0, int z1)
+    : x0(x0), x1(x1), y0(y0), y1(y1), z0(z0), z1(z1)
+{    
+}
+
+void CutBox::draw(Sculptor &s) {
+    s.cutBox(x0, x1, y0, y1, z0, z1);
+}
