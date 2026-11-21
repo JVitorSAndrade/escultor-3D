@@ -30,7 +30,7 @@ A escultura final está disponível no arquivo `escultura_final_saturno.off`.
 
 ## 🛠️ Tecnologias utilizadas
 
-- C++17
+- C++
 - Programação Orientada a Objetos (POO)
 - Git e GitHub
 - MeshLab
